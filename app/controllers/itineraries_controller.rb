@@ -22,6 +22,26 @@ class ItinerariesController < ApplicationController
 
   end
 
+  def edit
+
+  end
+
+  def update
+    if @itinerary.update_attributes(params[:itinerary])
+      flash[:notice] = "Itinerary has been updated."
+      redirect_to [@destination, @itinerary]
+    else
+      flash[:alert] = "Itinerary has not been updated."
+      render :action => "edit"
+    end
+  end
+
+  def destroy
+    @itinerary.destroy
+    flash[:notice] = "Ticket has been deleted."
+    redirect_to @destination
+  end
+
 
   private
     def find_destination
