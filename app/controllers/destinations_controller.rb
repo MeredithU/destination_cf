@@ -14,7 +14,8 @@ class DestinationsController < ApplicationController
       flash[:notice] = "Destination has been created."
       redirect_to @destination
     else
-      # TBD
+      flash[:alert] = "Destination has not been created."
+      render :action => "new"
     end
   end
 
