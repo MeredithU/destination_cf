@@ -38,7 +38,7 @@ class ItinerariesController < ApplicationController
 
   def destroy
     @itinerary.destroy
-    flash[:notice] = "Ticket has been deleted."
+    flash[:notice] = "Itinerary has been deleted."
     redirect_to @destination
   end
 
