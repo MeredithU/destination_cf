@@ -1,8 +1,13 @@
 TravelAppCf::Application.routes.draw do
 
+  devise_for :users
+
   root :to => "destinations#index"
 
-  resources :destinations
+  resources :destinations do
+    resources :itineraries
+  end
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

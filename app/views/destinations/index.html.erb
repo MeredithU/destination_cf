@@ -1,8 +1,21 @@
 <%= link_to "New Destination", new_destination_path %>
 
 <h2>Destinations</h2>
-<ul>
+
+<table>
+  <tr>
+    <th>City</th>
+    <th>Country</th>
+    <th>Start Date</th>
+    <th>End Date</th>
+  </tr>
+
   <% @destinations.each do |destination| %>
-    <li><%= link_to destination.city, destination %></li>
+    <tr>
+      <td><%= link_to destination.city, destination %></td>
+      <td><%= destination.country %></td>
+      <td><%= destination.startdate %></td>
+      <td><%= destination.enddate %></td>
+    </tr>
   <% end %>
-</ul>
+</table>

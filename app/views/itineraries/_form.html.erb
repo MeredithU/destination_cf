@@ -1,0 +1,20 @@
+<%= form_for [@destination, @itinerary] do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :activity %><br />
+    <%= f.text_field :activity %>
+  </p>
+
+  <p>
+    <%= f.label :city %><br />
+    <%= f.text_field :city %>
+  </p>
+
+  <p>
+    <%= f.label :plandate %>
+    <%= f.datetime_select :plandate %>
+  </p>
+
+  <%= f.submit %>
+
+<% end %>
