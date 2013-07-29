@@ -1,4 +1,9 @@
 TravelAppCf::Application.routes.draw do
+
+  root :to => "destinations#index"
+
+  resources :destinations
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
