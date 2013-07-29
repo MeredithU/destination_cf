@@ -1,3 +1,5 @@
 == Code Fellows Assignment - Travel App
 
-This app will have users register and sign-in in order to use it. They will be able to sign up for a destination city and then use nested resources in order to indicate which activities will be for each destination.
+This app will have users register and sign-in to create a destination city and an itinerary.
+
+I was able to use nested resources, devise and associations in order to complete this assignment.
