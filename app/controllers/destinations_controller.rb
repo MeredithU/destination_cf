@@ -38,4 +38,11 @@ class DestinationsController < ApplicationController
     end
   end
 
+  def destroy
+    @destination = Destination.find(params[:id])
+    @destination.destroy
+    flash[:notice] = "Destination has been deleted."
+    redirect_to destinations_path
+  end
+
 end
